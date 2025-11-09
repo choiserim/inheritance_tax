@@ -1,5 +1,3 @@
-# inheritance_tax
-상속세 계산기
 <!DOCTYPE html>
 <html lang="ko">
 <head>
