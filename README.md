@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -104,10 +103,10 @@
                     </div>
                 </div>
 
-                <!-- 자녀 수 (1순위) -->
+                <!-- 자녀 수 (1순위) - value="0"으로 수정됨 -->
                 <div class="flex items-center space-x-6">
                     <label for="childrenCount" class="block text-gray-700 w-24">직계비속 (자녀 수)</label>
-                    <input type="number" id="childrenCount" min="0" value="2"
+                    <input type="number" id="childrenCount" min="0" value="0"
                            class="w-24 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                            oninput="updateHeirInputs()">
                 </div>
@@ -143,7 +142,7 @@
                     </div>
                 </div>
 
-                <!-- 형제자매 수 (3순위) - input type="number"로 변경 -->
+                <!-- 형제자매 수 (3순위) -->
                 <div id="sibling-section" class="flex items-center space-x-6">
                     <label for="siblingCount" class="block text-gray-700 w-24">형제자매 수</label>
                     <input type="number" id="siblingCount" min="0" value="0"
@@ -423,7 +422,7 @@
         window.onload = function() {
             updateHeirInputs();
             document.getElementById('childrenCount').value = parseInt(document.getElementById('childrenCount').value) || 0;
-            document.getElementById('siblingCount').value = parseInt(document.getElementById('siblingCount').value) || 0; // 추가
+            document.getElementById('siblingCount').value = parseInt(document.getElementById('siblingCount').value) || 0; 
             formatNumber(document.getElementById('inheritanceAmount'));
         }
         
